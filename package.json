@@ -1,0 +1,28 @@
+{
+  "name": "apirest",
+  "version": "1.0.0",
+  "description": "Mi Primera APIREST",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/robertrojasligean/Dise-o-Frotend.git"
+  },
+  "author": "robert",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/robertrojasligean/Dise-o-Frotend/issues"
+  },
+  "homepage": "https://github.com/robertrojasligean/Dise-o-Frotend#readme",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^5.1.0",
+    "mongoose": "^8.16.0",
+    "morgan": "^1.10.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.10"
+  }
+}

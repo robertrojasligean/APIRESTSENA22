@@ -20,11 +20,18 @@ const postRoute = require('./routes/post');
 app.use('/servicios', postRoute);
 
 //Realizo la conexión a la base de datos
-mongoose.connect('mongodb+srv://robert11unofirst:gKEMlNepEKPFdtLx@pruebamodulo.hvuvu29.mongodb.net/post?retryWrites=true&w=majority&appName=pruebamodulo',{
+mongoose.connect('mongodb+srv://robert11unofirst:gKEMlNepEKPFdtLx@pruebamodulo.hvuvu29.mongodb.net/modulo6?retryWrites=true&w=majority&appName=pruebamodulo',{
     useNewUrlParser: true,
     useUnifiedTopology: true
 });
 
+// creo una constante para la conexión a las bd
+// y la llamo con mongoose.connection
+// para no tener que llamar la conexión cada vez que la necesite
+const connecction = mongoose.connection;
+connecction.once('open', () => {
+    console.log('Conexión a la base de datos establecida correctamente');
+});
 
 
 /* app.get('/', (req, res) => {
@@ -33,5 +40,5 @@ mongoose.connect('mongodb+srv://robert11unofirst:gKEMlNepEKPFdtLx@pruebamodulo.h
 }); */
 
 
-
+// puerto por el que va a escuchar el servidor
 app.listen(10000);
